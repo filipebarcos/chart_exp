@@ -1,3 +1,4 @@
+//Line Chart
 var lineData = {
   labels: ['11 Nov', '12 Nov', '13 Nov', '14 Nov', '15 Nov'],
   datasets: [
@@ -21,6 +22,8 @@ var lineData = {
 var lineContext = document.getElementById('lineChart').getContext('2d');
 var lineChart = new Chart(lineContext).Line(lineData);
 
+
+//Bar Chart
 var barData = {
   labels: ['11 Nov', '12 Nov', '13 Nov', '14 Nov', '15 Nov'],
   datasets: [
@@ -39,3 +42,22 @@ var barData = {
 
 var barContext = document.getElementById('barChart').getContext('2d');
 var barChart = new Chart(barContext).Bar(barData);
+
+//Doughnut Chart
+var doughnutData = [
+  {
+    value: 30,
+    color: "#00F"
+  },
+  {
+    value: 50,
+    color: "#F00"
+  },
+  {
+    value: 40,
+    color: "#FF0"
+  }
+];
+
+var doughnutContext = document.getElementById('doughnutChart').getContext('2d');
+var doughnutChart = new Chart(doughnutContext).Doughnut(doughnutData);
